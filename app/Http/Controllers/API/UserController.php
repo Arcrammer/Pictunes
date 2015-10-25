@@ -4,7 +4,6 @@ namespace Pictunes\Http\Controllers\API;
 
 use Illuminate\Http\Request;
 use Pictunes\Http\Requests;
-use Pictunes\Http\Controllers\Controller;
 
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController; // API Controller
 use Pictunes\User; // 'User' model

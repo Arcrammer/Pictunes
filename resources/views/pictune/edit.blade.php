@@ -1,7 +1,7 @@
 @extends('master')
-@section('title', 'Create')
+@section('title', 'Edit')
 @section('content')
-{!! Form::open(['action' => 'DashboardController@store']) !!}
+{!! Form::model($pictune, ['method' => 'PATCH', 'action' => ['DashboardController@update', $pictune->id]]) !!}
   {!! Form::hidden('post_creator', 1) !!}
   {!! Form::file('image_name', ['accept' => 'image/*']) !!}
   <br />
