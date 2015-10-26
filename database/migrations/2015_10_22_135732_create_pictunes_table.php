@@ -12,6 +12,7 @@ class CreatePictunesTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('pictunes');
         Schema::create('pictunes', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->bigInteger('post_creator')

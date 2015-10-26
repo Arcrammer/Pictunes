@@ -13,6 +13,7 @@ class CreateApiKeysTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('api_keys');
         Schema::create('api_keys', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
@@ -29,6 +30,7 @@ class CreateApiKeysTable extends Migration
             //$table->foreign('user_id')->references('id')->on('users');
         });
 
+        Schema::dropIfExists('api_logs');
         Schema::create('api_logs', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('api_key_id', false, true)->nullable();

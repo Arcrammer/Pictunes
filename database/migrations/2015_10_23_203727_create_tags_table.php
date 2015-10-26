@@ -10,12 +10,14 @@ class CreateTagsTable extends Migration {
    * @return void
    */
   public function up() {
+    Schema::dropIfExists('tags');
     Schema::create('tags', function (Blueprint $table) {
         $table->increments('id');
         $table->string('name');
         $table->timestamps();
     });
 
+    Schema::dropIfExists('pictune_tag');
     Schema::create('pictune_tag', function (Blueprint $table) {
       // Columns
       $table->integer('pictune_id')
