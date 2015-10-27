@@ -21,7 +21,7 @@ Route::group([
   'namespace' => 'API'
 ], function () {
   Route::resource('user', 'UserController');
-  Route::resource('dashboard', 'UserController');
+  Route::resource('dashboard', 'DashboardController');
 });
 
 // Desktop and mobile site controllers
