@@ -17,11 +17,11 @@ Route::get('/', function () {
 
 // API controllers
 Route::group([
-  'domain' => 'api.pictunes.dev',
+  'domain' => 'api.pictunes.{tld}',
   'namespace' => 'API'
 ], function () {
   Route::resource('user', 'UserController');
-  Route::resource('dashboard', 'DashboardController');
+  Route::resource('dashboard', 'UserController');
 });
 
 // Desktop and mobile site controllers

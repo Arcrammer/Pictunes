@@ -2101,6 +2101,7 @@ return array(
     'Pictunes\\Http\\Requests\\CreateUser' => $baseDir . '/app/Http/Requests/CreateUser.php',
     'Pictunes\\Http\\Requests\\Request' => $baseDir . '/app/Http/Requests/Request.php',
     'Pictunes\\Http\\Requests\\UpdateUserData' => $baseDir . '/app/Http/Requests/UpdateUserData.php',
+    'Pictunes\\Http\\Traits\\DashboardTrait' => $baseDir . '/app/Http/Traits/DashboardTrait.php',
     'Pictunes\\Jobs\\Job' => $baseDir . '/app/Jobs/Job.php',
     'Pictunes\\Pictune' => $baseDir . '/app/Pictune.php',
     'Pictunes\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
