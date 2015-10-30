@@ -8,10 +8,10 @@ use Pictunes\Http\Requests;
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController; // API Controller
 use Pictunes\Pictune; // 'Pictune' model
 use Pictunes\Tag; // 'Tag' model
-use Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
 
 class DashboardController extends ApiGuardController
 {
+    use \Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
     /**
      * Display a listing of the resource.
      *

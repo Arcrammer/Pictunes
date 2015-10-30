@@ -18,7 +18,7 @@ class Pictune extends Model {
     * Pictunes have only one post creator
      */
     function creator() {
-      return $this->belongsTo('Pictunes\User', 'id');
+      return $this->belongsToMany('Pictunes\User', 'pictune_creator', 'post_creator', 'pictune_id')->withTimestamps();
     }
 
     /**

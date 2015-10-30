@@ -31,6 +31,9 @@ trait DashboardTrait {
       // Save it
       $pictune->save();
 
+      // Set the creators' username
+      $pictune->creator()->attach($recordData['post_creator']);
+
       // Set the tags on the pictune
       $tags = $submittedData['tags'];
       $recordTags = [];

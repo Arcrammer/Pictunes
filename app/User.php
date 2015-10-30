@@ -51,6 +51,6 @@ class User extends Model implements AuthenticatableContract,
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     function pictunes() {
-        return $this->hasMany('Pictunes\Pictune', 'post_creator');
+        return $this->belongsToMany('Pictunes\Pictune', 'pictune_creators', 'id', 'post_creator');
     }
 }
