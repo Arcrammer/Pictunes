@@ -8,7 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'AddRememberTokenColumn' => $baseDir . '/database/migrations/2015_10_23_135157_add_remember_token_column.php',
     'CreateApiKeysTable' => $baseDir . '/database/migrations/2015_03_02_031822_create_api_keys_table.php',
-    'CreatePictuneUserTable' => $baseDir . '/database/migrations/2015_10_29_205646_create_pictune_user_table.php',
+    'CreateFollowingTable' => $baseDir . '/database/migrations/2015_10_30_211006_create_following_table.php',
     'CreatePictunesTable' => $baseDir . '/database/migrations/2015_10_22_135732_create_pictunes_table.php',
     'CreateTagsTable' => $baseDir . '/database/migrations/2015_10_23_203727_create_tags_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2015_10_21_004745_create_users_table.php',
@@ -16,6 +16,7 @@ return array(
     'File_Iterator' => $vendorDir . '/phpunit/php-file-iterator/src/Iterator.php',
     'File_Iterator_Facade' => $vendorDir . '/phpunit/php-file-iterator/src/Facade.php',
     'File_Iterator_Factory' => $vendorDir . '/phpunit/php-file-iterator/src/Factory.php',
+    'FolloweeSeeder' => $baseDir . '/database/seeds/FolloweeSeeder.php',
     'Hamcrest\\Arrays\\IsArray' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
     'Hamcrest\\Arrays\\IsArrayContaining' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
     'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',

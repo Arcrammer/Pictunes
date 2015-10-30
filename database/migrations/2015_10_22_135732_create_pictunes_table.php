@@ -17,7 +17,7 @@ class CreatePictunesTable extends Migration
           $table->bigIncrements('id');
           $table->bigInteger('post_creator')
             ->unsigned()
-            ->references('id')
+            ->references('username')
             ->on('users');
           $table->string('image_name');
           $table->string('audio_name');
