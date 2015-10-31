@@ -6,56 +6,24 @@ use Illuminate\Http\Request;
 use Pictunes\Http\Requests;
 
 use Chrisbjr\ApiGuard\Http\Controllers\ApiGuardController; // API Controller
-use Pictunes\Pictune; // 'Pictune' model
-use Pictunes\User; // 'User' model
-use Pictunes\Tag; // 'Tag' model
-use Pictunes\Follower; // 'Follower' model
+use Pictune; // 'Pictune' model
 use Auth; // Authentication
 
 class DashboardController extends ApiGuardController
 {
     use \Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
     /**
-     * Display a listing of the resource.
+     * Return all of the Pictunes from the pictuners the user follows
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $current_user = Auth::user();
-        $users_following = $current_user->pictunersFollowing();
-        // foreach ($users_following as $user_following) {
-        //   echo $user_following->username;
-        // }
-        return $users_following->get();
-        // $followees = Follower::where('follower','=', $current_user_id)->get();
-        // $pictunes_from_users_following = [];
-        // foreach ($followees as $followee) {
-        //   $followee_id = $followee["followee"];
-        //   $user = User::find($followee_id);
-        //   $pictunes = $user->pictunes;
-        //   foreach ($pictunes as $pictune) {
-        //     $pictune["post_creator"] = $user->username;
-        //     array_push($pictunes_from_users_following, $pictune);
-        //   }
-        // }
-
-        // $current_user->following();
-        // foreach ($person_following) {
-        //   $person_following
-        // }
-        // foreach ($pictunes as $pictune) {
-        //   // Set the username
-        //   $userId = $pictune["post_creator"];
-        //   $user["id"]
-        // }
-        // $response = response(json_encode($pictunes_from_users_following));
-        // $response->header("Content-Type", "application/json");
-        // return $response;
+      return Auth::user()->pictunesFromUsersFollowing();
     }
 
     /**
-     * Display the specified resource.
+     * Return a particular pictune
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -66,7 +34,7 @@ class DashboardController extends ApiGuardController
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the pictunes' data
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -79,7 +47,7 @@ class DashboardController extends ApiGuardController
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Delete a pictune
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

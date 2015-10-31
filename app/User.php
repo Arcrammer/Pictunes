@@ -60,21 +60,13 @@ class User extends Model implements AuthenticatableContract,
      *
      * @return \Illuminate\Database\Eloquent\Relations\
      */
-    function pictunersFollowing() {
+    function pictunesFromUsersFollowing() {
       // Fetch and return the pictunes frome the pictunes
       // this pictuner is following then return them
       return \DB::table('pictunes')
         ->select('*')
         ->join('followships', 'follows', '=', 'post_creator')
-        ->where('follower', '=', Auth::id());
+        ->where('follower', '=', Auth::id())
+        ->get();
     }
-
-    /**
-     * Each user follows multiple other users
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    // function following() {
-    //     return $this->hasMany('Pictune\Following');
-    // }
 }
