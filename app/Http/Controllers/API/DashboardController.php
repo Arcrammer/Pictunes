@@ -10,6 +10,7 @@ use Pictunes\Pictune; // 'Pictune' model
 use Pictunes\User; // 'User' model
 use Pictunes\Tag; // 'Tag' model
 use Pictunes\Follower; // 'Follower' model
+use Auth; // Authentication
 
 class DashboardController extends ApiGuardController
 {
@@ -21,18 +22,18 @@ class DashboardController extends ApiGuardController
      */
     public function index()
     {
-        $current_user_id = 1;
-        $followees = Follower::where('follower','=', $current_user_id)->get();
-        $pictunes_from_users_following = [];
-        foreach ($followees as $followee) {
-          $followee_id = $followee["followee"];
-          $user = User::find($followee_id);
-          $pictunes = $user->pictunes;
-          foreach ($pictunes as $pictune) {
-            $pictune["post_creator"] = $user->username;
-            array_push($pictunes_from_users_following, $pictune);
-          }
-        }
+        return Auth::user();
+        // $followees = Follower::where('follower','=', $current_user_id)->get();
+        // $pictunes_from_users_following = [];
+        // foreach ($followees as $followee) {
+        //   $followee_id = $followee["followee"];
+        //   $user = User::find($followee_id);
+        //   $pictunes = $user->pictunes;
+        //   foreach ($pictunes as $pictune) {
+        //     $pictune["post_creator"] = $user->username;
+        //     array_push($pictunes_from_users_following, $pictune);
+        //   }
+        // }
 
         // $current_user->following();
         // foreach ($person_following) {
@@ -43,9 +44,9 @@ class DashboardController extends ApiGuardController
         //   $userId = $pictune["post_creator"];
         //   $user["id"]
         // }
-        $response = response(json_encode($pictunes_from_users_following));
-        $response->header("Content-Type", "application/json");
-        return $response;
+        // $response = response(json_encode($pictunes_from_users_following));
+        // $response->header("Content-Type", "application/json");
+        // return $response;
     }
 
     /**

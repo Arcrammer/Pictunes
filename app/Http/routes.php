@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// Desktop and mobile authentication
+Route::controllers([
+  'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
+  'password' => '\Pictunes\Http\Controllers\Auth\PasswordController'
+]);
 
 // API controllers
 Route::group([
@@ -27,9 +32,3 @@ Route::group([
 // Desktop and mobile site controllers
 Route::resource('user', 'UserController');
 Route::resource('dashboard', 'DashboardController');
-
-// Desktop and mobile authentication
-Route::controllers([
-  'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
-  'password' => '\Pictunes\Http\Controllers\Auth\PasswordController'
-]);

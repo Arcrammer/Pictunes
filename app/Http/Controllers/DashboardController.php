@@ -1,7 +1,7 @@
 <?php
 
 namespace Pictunes\Http\Controllers;
-
+use Auth;
 use Illuminate\Http\Request;
 use Pictunes\Http\Requests;
 use Pictunes\Http\Controllers\Controller;
@@ -19,7 +19,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return "« Dashboard, Pictunes from people the user is following will be here. »";
+        // return "« Dashboard, Pictunes from people the user is following will be here. »";
+        return Auth::user();
     }
 
     /**
