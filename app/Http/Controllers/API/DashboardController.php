@@ -22,7 +22,12 @@ class DashboardController extends ApiGuardController
      */
     public function index()
     {
-        return Auth::user();
+        $current_user = Auth::user();
+        $users_following = $current_user->pictunersFollowing();
+        // foreach ($users_following as $user_following) {
+        //   echo $user_following->username;
+        // }
+        return $users_following->get();
         // $followees = Follower::where('follower','=', $current_user_id)->get();
         // $pictunes_from_users_following = [];
         // foreach ($followees as $followee) {

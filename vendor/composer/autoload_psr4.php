@@ -32,6 +32,7 @@ return array(
     'EllipseSynergie\\ApiResponse\\Tests\\' => array($vendorDir . '/ellipsesynergie/api-response/tests'),
     'EllipseSynergie\\ApiResponse\\' => array($vendorDir . '/ellipsesynergie/api-response/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
+    'Doctrine\\Common\\Cache\\' => array($vendorDir . '/doctrine/cache/lib/Doctrine/Common/Cache'),
     'ClassPreloader\\' => array($vendorDir . '/classpreloader/classpreloader/src'),
     'Chrisbjr\\ApiGuard\\' => array($vendorDir . '/chrisbjr/api-guard/src'),
 );

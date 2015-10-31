@@ -12,14 +12,14 @@ class CreateFollowingTable extends Migration
      */
     public function up()
     {
-        Schema::dropIfExists('followers');
-        Schema::create('followers', function (Blueprint $table){
-          $table->bigIncrements('id');
-          $table->bigInteger('follower');
-          $table->bigInteger('followee');
-          $table->timestamps();
-          $table->softDeletes();
-        });
+        // Schema::dropIfExists('followers');
+        // Schema::create('followers', function (Blueprint $table){
+        //   $table->bigIncrements('id');
+        //   $table->bigInteger('follower');
+        //   $table->bigInteger('followee');
+        //   $table->timestamps();
+        //   $table->softDeletes();
+        // });
     }
 
     /**
@@ -29,6 +29,6 @@ class CreateFollowingTable extends Migration
      */
     public function down()
     {
-      Schema::dropIfExists('followers');
+      // Schema::dropIfExists('followers');
     }
 }

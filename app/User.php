@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Auth;
 
 class User extends Model implements AuthenticatableContract,
   AuthorizableContract,
@@ -52,6 +53,20 @@ class User extends Model implements AuthenticatableContract,
      */
     function pictunes() {
         return $this->hasMany('Pictunes\Pictune', 'post_creator');
+    }
+
+    /**
+     * Each user belongs to many other users as a follower
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\
+     */
+    function pictunersFollowing() {
+      // Fetch and return the pictunes frome the pictunes
+      // this pictuner is following then return them
+      return \DB::table('pictunes')
+        ->select('*')
+        ->join('followships', 'follows', '=', 'post_creator')
+        ->where('follower', '=', Auth::id());
     }
 
     /**
