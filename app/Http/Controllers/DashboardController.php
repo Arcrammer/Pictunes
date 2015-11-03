@@ -19,8 +19,8 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        // return "« Dashboard, Pictunes from people the user is following will be here. »";
-        return Auth::user();
+      $viewData['pictunes'] = json_encode(Auth::user()->pictunesFromUsersFollowing());
+      return view('pictune.dashboard', $viewData);
     }
 
     /**

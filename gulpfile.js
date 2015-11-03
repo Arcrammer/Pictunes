@@ -1,4 +1,6 @@
-var elixir = require('laravel-elixir');
+var elixir = require('laravel-elixir'),
+cssDir = 'public/Assets/Stylesheets/';
+elixir.config.sourcemaps = false;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,4 +14,10 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
+  mix.sass('Main.scss', 'resources/assets/css/Main.css')
+    .styles([
+      'Reset.css',
+      'Main.css'
+    ], 'Main.css')
+    .version(cssDir + 'Main.css');
 });

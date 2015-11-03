@@ -63,9 +63,23 @@ class User extends Model implements AuthenticatableContract,
     function pictunesFromUsersFollowing() {
       // Fetch and return the pictunes frome the pictunes
       // this pictuner is following then return them
+      $columns = [
+        // Defining an array of column values means
+        // no tricky EOT whitespace problems.
+        'image_name',
+        'audio_name',
+        'repost_count AS reposts',
+        'heart_count AS hearts',
+        'pictunes.created_at AS created',
+        'pictunes.updated_at AS updated',
+        'username AS poster_username',
+        'selfie_name AS poster_selfie_name',
+        'deleted_at AS poster_deleted_at'
+      ];
       return \DB::table('pictunes')
-        ->select('*')
+        ->select($columns)
         ->join('followships', 'follows', '=', 'post_creator')
+        ->join('users', 'users.id', '=', 'post_creator')
         ->where('follower', '=', Auth::id())
         ->get();
     }

@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 // Desktop and mobile authentication
 Route::controllers([
   'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
@@ -26,9 +23,9 @@ Route::group([
   'namespace' => 'API'
 ], function () {
   Route::resource('user', 'UserController');
-  Route::resource('dashboard', 'DashboardController');
+  Route::resource('/', 'DashboardController');
 });
 
 // Desktop and mobile site controllers
 Route::resource('user', 'UserController');
-Route::resource('dashboard', 'DashboardController');
+Route::resource('/', 'DashboardController');

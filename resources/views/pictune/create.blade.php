@@ -1,7 +1,10 @@
 @extends('master')
 @section('title', 'Create')
 @section('content')
-{!! Form::open(['action' => 'DashboardController@store']) !!}
+{!! Form::open([
+    'action' => 'DashboardController@store',
+    'enctype' => 'multipart/form-data'
+  ]) !!}
   {!! Form::hidden('post_creator', 1) !!}
   {!! Form::file('image_name', ['accept' => 'image/*']) !!}
   <br />
