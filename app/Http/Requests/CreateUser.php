@@ -2,9 +2,9 @@
 
 namespace Pictunes\Http\Requests;
 
-use Pictunes\Http\Requests\UpdateUserData;
+use Illuminate\Foundation\Http\FormRequest;
 
-class CreateUser extends UpdateUserData
+class CreateUser extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,10 @@ class CreateUser extends UpdateUserData
     public function rules()
     {
         return [
-          'username' => 'required',
-          'password' => 'required',
-          'email_address' => 'required'
+          'username' => 'required|alpha_num|min:4|max:92|unique:users,username',
+          'password' => 'required|min:8|max:64',
+          'email_address' => 'required|email',
+          'selfie_name' => 'image|unique:users,selfie_name'
         ];
     }
 }

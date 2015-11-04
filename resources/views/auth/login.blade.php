@@ -10,14 +10,14 @@
     {!! csrf_field() !!}
 
     <div>
-        Email
+        Username
         <!-- <input type="email" name="email_address" value="{{ old('email_address') }}"> -->
-        <input type="email" name="email" value="iAlexander@pictunes.dev">
+        <input type="text" name="username" value="{{ old('username') }}">
     </div>
 
     <div>
         Password
-        <input type="password" name="password" id="password" value="secret">
+        <input type="password" name="password" id="password">
     </div>
 
     <div>

@@ -24,6 +24,10 @@ Route::group([
 ], function () {
   Route::resource('user', 'UserController');
   Route::resource('/', 'DashboardController');
+  Route::controllers([
+    'auth' => '\Pictunes\Http\Controllers\API\Auth\AuthController',
+    'password' => '\Pictunes\Http\Controllers\API\Auth\PasswordController'
+  ]);
 });
 
 // Desktop and mobile site controllers

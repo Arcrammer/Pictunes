@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'Create')
+@section('title', 'Dashboard')
 @section('content')
 <div class="pictunes">
   @foreach (json_decode($pictunes) as $pictune)

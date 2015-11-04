@@ -6,13 +6,41 @@ use Illuminate\Http\Request;
 use Pictunes\Http\Requests;
 use Pictunes\Http\Controllers\Controller;
 
+use Auth;
 use Pictunes\Pictune; // 'Pictune' model
 use Pictunes\Tag; // 'Tag' model
-use Log;
-use Input;
-use File;
 
 trait DashboardTrait {
+  /**
+   * Return all of the Pictunes from the pictuners the user follows
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @return \Illuminate\Http\Response
+   */
+  public function index(Request $request)
+  {
+      if (strpos($request->url(), "api.pictunes.") === false) {
+        // The request expects a view. The url is not 'api.pictunes.{tld}'
+        if (Auth::check()) {
+          // The user has logged in
+          $viewData['pictunes'] = json_encode(Auth::user()->pictunesFromUsersFollowing());
+          return view('pictune.dashboard', $viewData);
+        } else {
+          // The user has not logged in
+          return redirect('http://pictunes.' . env('TLD') . '/auth/register');
+        }
+      } else if (strpos($request->url(), "api.pictunes.") !== false) {
+        // The request expects JSON. The url is 'api.pictunes.{tld}'
+        if (Auth::check()) {
+          // The user has logged in
+          return Auth::user()->pictunesFromUsersFollowing();
+        } else {
+          // The user has not logged in
+          return response('Unauthorised. Has the user logged in?', 401);
+        }
+      }
+  }
+
   /**
    * Store a newly created resource in storage.
    *

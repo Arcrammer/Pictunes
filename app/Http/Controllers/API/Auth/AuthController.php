@@ -1,6 +1,6 @@
 <?php
 
-namespace Pictunes\Http\Controllers\Auth;
+namespace Pictunes\Http\Controllers\API\Auth;
 
 use Pictunes\User;
 use Validator;
@@ -27,7 +27,6 @@ class AuthController extends Controller
 
     protected $redirectPath = "/";
     protected $loginPath = "auth/login";
-    protected $username = 'username';
 
     /**
      * Create a new authentication controller instance.

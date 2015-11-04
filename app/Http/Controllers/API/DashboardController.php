@@ -12,16 +12,7 @@ use Auth; // Authentication
 class DashboardController extends ApiGuardController
 {
     use \Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
-    /**
-     * Return all of the Pictunes from the pictuners the user follows
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-      return Auth::user()->pictunesFromUsersFollowing();
-    }
-
+    
     /**
      * Return a particular pictune
      *

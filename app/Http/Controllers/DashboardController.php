@@ -1,28 +1,19 @@
 <?php
 
 namespace Pictunes\Http\Controllers;
-use Auth;
+
 use Illuminate\Http\Request;
 use Pictunes\Http\Requests;
 use Pictunes\Http\Controllers\Controller;
 
+use Auth;
 use Pictunes\Pictune; // 'Pictune' model
 use Pictunes\Tag; // 'Tag' model
 
 class DashboardController extends Controller
 {
     use \Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-      $viewData['pictunes'] = json_encode(Auth::user()->pictunesFromUsersFollowing());
-      return view('pictune.dashboard', $viewData);
-    }
-
+    
     /**
      * Show the form for creating a new resource.
      *
