@@ -24,7 +24,6 @@ class VerifyCsrfToken extends BaseVerifier
       // value. If it is, we append the current path to '$except'
       //
       if (strpos(Request::url(), "api.pictunes.") !== false) {
-        \Log::debug('true');
         array_push($this->except, Request::path());
       }
     }

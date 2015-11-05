@@ -31,5 +31,9 @@
     <div>
         <button type="submit">Register</button>
     </div>
+
+    <div>
+        <a href="/auth/login">Login</a>
+    </div>
 </form>
 @stop

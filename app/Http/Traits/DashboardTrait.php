@@ -36,7 +36,7 @@ trait DashboardTrait {
           return Auth::user()->pictunesFromUsersFollowing();
         } else {
           // The user has not logged in
-          return response('Unauthorised. Has the user logged in?', 401);
+          return response('Not Authenticated', 401);
         }
       }
   }

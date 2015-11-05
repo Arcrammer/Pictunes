@@ -12,10 +12,15 @@
 */
 
 // Desktop and mobile authentication
-Route::controllers([
-  'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
-  'password' => '\Pictunes\Http\Controllers\Auth\PasswordController'
-]);
+Route::group(['domain' => 'pictunes.{tld}'], function () {
+  // Desktop and mobile site controllers
+  Route::resource('user', 'UserController');
+  Route::resource('/', 'DashboardController');
+  Route::controllers([
+    'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
+    'password' => '\Pictunes\Http\Controllers\Auth\PasswordController'
+  ]);
+});
 
 // API controllers
 Route::group([
@@ -29,7 +34,3 @@ Route::group([
     'password' => '\Pictunes\Http\Controllers\API\Auth\PasswordController'
   ]);
 });
-
-// Desktop and mobile site controllers
-Route::resource('user', 'UserController');
-Route::resource('/', 'DashboardController');

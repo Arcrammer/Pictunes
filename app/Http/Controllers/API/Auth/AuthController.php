@@ -29,6 +29,23 @@ class AuthController extends Controller
     protected $loginPath = "auth/login";
 
     /**
+     * Handle a login request to the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postLogin(Request $request)
+    {
+      $credentials = $request->all();
+      if (\Auth::attempt($credentials)) {
+        // Authentication was successful
+        return response('Successful authentication! :D', 200);
+      } else {
+        return response('You\'re not authenticated :/', 401);
+      }
+    }
+
+    /**
      * Create a new authentication controller instance.
      *
      * @return void
@@ -46,7 +63,7 @@ class AuthController extends Controller
     public function authenticate() {
       if (Auth::attempt(['username' => $username, 'password' => $password])) {
         // Authentication was successful
-        return redirect()->intended();
+        return response('Authentication successful', 200);
       }
     }
 

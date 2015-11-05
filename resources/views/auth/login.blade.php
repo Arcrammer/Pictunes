@@ -28,5 +28,10 @@
     <div>
         <button type="submit">Login</button>
     </div>
+
+    <div>
+        <a href="/auth/register">I need an account.</a>
+    </div>
+
 </form>
 @stop
