@@ -38,10 +38,11 @@ class AuthController extends Controller
     {
       $credentials = $request->all();
       if (\Auth::attempt($credentials)) {
-        // Authentication was successful
-        return response('Successful authentication! :D', 200);
+        // Authentication was successful; Return the
+        // pictunes from the pictuners they follow
+        return response('Successful authentication!', 200);
       } else {
-        return response('You\'re not authenticated :/', 401);
+        return response('No authentication for you, sir.', 401);
       }
     }
 
