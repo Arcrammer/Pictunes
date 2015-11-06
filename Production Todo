@@ -1,1 +1,6 @@
-Generate a new API key and put that in the iOS application. Make sure you don't upload it to GitHub again.
+Generate a new API key and put that in the iOS application.
+Make sure you don't upload it to GitHub again.
+
+Change the passwords of each user that's already been
+created (i.e. 'iAlexander', 'Arcrammer', and 'Matt')
+because their passwords are all probably somewhere at GitHub

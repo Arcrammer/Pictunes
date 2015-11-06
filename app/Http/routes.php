@@ -33,4 +33,5 @@ Route::group([
     'auth' => '\Pictunes\Http\Controllers\API\Auth\AuthController',
     'password' => '\Pictunes\Http\Controllers\API\Auth\PasswordController'
   ]);
+  Route::get('pictune/image/{imageID}', 'DashboardController@image');
 });
