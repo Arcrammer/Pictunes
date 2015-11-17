@@ -11,27 +11,41 @@
 |
 */
 
-// Desktop and mobile authentication
+// Desktop and mobile site
 Route::group(['domain' => 'pictunes.{tld}'], function () {
-  // Desktop and mobile site controllers
-  Route::resource('user', 'UserController');
-  Route::resource('/', 'DashboardController');
+  // Get
+  Route::get('pictuner', function () {
+    // What do they want, exactly? Send them home.
+    return redirect('http://pictunes.dev/');
+  });
+  Route::get('pictuner/{username}', 'UserController@user_pictunes');
+
+  // Controllers
+  Route::resource('/', 'DashboardController@index');
+
+  // Authentication controllers
   Route::controllers([
     'auth' => '\Pictunes\Http\Controllers\Auth\AuthController',
     'password' => '\Pictunes\Http\Controllers\Auth\PasswordController'
   ]);
 });
 
-// API controllers
+// API
 Route::group([
   'domain' => 'api.pictunes.{tld}',
   'namespace' => 'API'
 ], function () {
-  Route::resource('user', 'UserController');
+  // Controllers
+  Route::resource('pictuner', 'UserController');
   Route::resource('/', 'DashboardController');
+
+  // Get
+  Route::get('pictune/image/{imageID}', 'DashboardController@pictuneImage');
+  Route::get('pictuner/selfie/{imageID}', 'DashboardController@pictunerImage');
+
+  // Authentication controllers
   Route::controllers([
     'auth' => '\Pictunes\Http\Controllers\API\Auth\AuthController',
     'password' => '\Pictunes\Http\Controllers\API\Auth\PasswordController'
   ]);
-  Route::get('pictune/image/{imageID}', 'DashboardController@image');
 });

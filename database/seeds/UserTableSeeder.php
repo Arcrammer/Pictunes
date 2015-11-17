@@ -16,18 +16,21 @@ class UserTableSeeder extends Seeder
             'username' => 'iAlexander',
             'password' => bcrypt('secret'),
             'email' => 'iAlexander@pictunes.dev',
+            'selfie_name' => 'ProfilePhoto.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
           ], [
             'username' => 'Arcrammer',
             'password' => bcrypt('secret'),
             'email' => 'Arcrammer@pictunes.dev',
+            'selfie_name' => 'ProfilePhoto.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
           ], [
             'username' => 'Matt',
             'password' => bcrypt('secret'),
             'email' => 'Matt@pictunes.dev',
+            'selfie_name' => 'ProfilePhoto.png',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
           ]]);

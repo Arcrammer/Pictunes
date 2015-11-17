@@ -11,13 +11,13 @@
 
     <div>
         Username
-        <!-- <input type="email" name="email_address" value="{{ old('email_address') }}"> -->
-        <input type="text" name="username" value="{{ old('username') }}">
+        <!-- <input type="text" name="username" value="{{ old('username') }}"> -->
+        <input type="text" name="username" value="iAlexander">
     </div>
 
     <div>
         Password
-        <input type="password" name="password" id="password">
+        <input type="password" name="password" id="password" value="secret">
     </div>
 
     <div>

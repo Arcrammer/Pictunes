@@ -9,11 +9,12 @@ use Pictunes\Http\Controllers\Controller;
 use Auth;
 use Pictunes\Pictune; // 'Pictune' model
 use Pictunes\Tag; // 'Tag' model
+use Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
 
 class DashboardController extends Controller
 {
-    use \Pictunes\Http\Traits\DashboardTrait; // 'DashboardTrait' trait
-    
+    use DashboardTrait; // 'DashboardTrait' trait
+
     /**
      * Show the form for creating a new resource.
      *

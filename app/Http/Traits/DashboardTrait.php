@@ -19,25 +19,26 @@ trait DashboardTrait {
    */
   public function index(Request $request)
   {
-      if (strpos($request->url(), "api.pictunes.") === false) {
-        // The request expects a view. The url is not 'api.pictunes.{tld}'
-        if (Auth::check()) {
-          // The user has logged in
-          $viewData['pictunes'] = json_encode(Auth::user()->pictunesFromUsersFollowing());
-          return view('pictune.dashboard', $viewData);
-        } else {
-          // The user has not logged in
-          return redirect('http://pictunes.' . env('TLD') . '/auth/register');
-        }
-      } else if (strpos($request->url(), "api.pictunes.") !== false) {
-        // The request expects JSON. The url is 'api.pictunes.{tld}'
-        if (Auth::check()) {
-          // The user has logged in
+      if (Auth::check()) {
+        if (strpos($request->url(), "api.pictunes.") !== false) {
+          // The user has logged in and the request expects
+          // JSON. The url is 'api.pictunes.{tld}'; Return
+          // pictunes from the people this pictuner follows
           return Auth::user()->pictunesFromUsersFollowing();
         } else {
-          // The user has not logged in
-          return response('Not Authenticated', 401);
+          // The request expects a view. The url is not
+          // 'api.pictunes.{tld}', and the user has
+          // successfully logged in; Return  pictunes
+          // from the people this pictuner follows
+          $viewData['pictunes'] = json_encode(Auth::user()->pictunesFromUsersFollowing());
+          return view('pictune.dashboard', $viewData);
         }
+      }
+
+      if (!Auth::check()) {
+        // The user has not logged in; Treat
+        // them as a prospective user
+        return redirect('http://pictunes.' . env('TLD') . '/auth/register');
       }
   }
 
@@ -78,39 +79,44 @@ trait DashboardTrait {
             break;
         }
 
-        // Submitted image data
-        $uneditedImage = $imagecreate($image);
-        $uneditedImageWidth = imagesx($uneditedImage);
-        $uneditedImageHeight = imagesy($uneditedImage);
-        $uneditedImageRatio = $uneditedImageWidth / $uneditedImageHeight;
+        // ---------- ---------- ---------- ---------- ----------
+        // Poor and broken implementation of image cropping
+        // ---------- ---------- ---------- ---------- ----------
+        //
+        // // Submitted image data
+        // $uneditedImage = $imagecreate($image);
+        // $uneditedImageWidth = imagesx($uneditedImage);
+        // $uneditedImageHeight = imagesy($uneditedImage);
+        // $uneditedImageRatio = $uneditedImageWidth / $uneditedImageHeight;
+        //
+        // // Production ready image data
+        // $productionReadyImage = imagecreatetruecolor(1024, 1024);
+        // $productionReadyWidth = 1024;
+        // $productionReadyHeight = 1024;
+        // $productionReadyImageRatio = $productionReadyWidth / $productionReadyHeight;
+        //
+        // if ($uneditedImageRatio < $productionReadyImageRatio) {
+        //   // The submitted image is taller than it needs to be
+        //   if ($uneditedImageHeight > $productionReadyHeight) {
+        //     // The image is too tall
+        //     $uneditedImageHeight = $productionReadyHeight;
+        //     $uneditedImageWidth = ciel($uneditedImageHeight / $uneditedImageRatio);
+        //   }
+        // } else if ($uneditedImageWidth > $productionReadyWidth) {
+        //   // The submitted image is wider than it needs to be
+        //   $uneditedImageWidth = $productionReadyWidth;
+        //   $uneditedImageHeight = ceil($uneditedImageWidth / $uneditedImageRatio);
+        // }
+        // imagecopyresized(
+        //   $productionReadyImage, $uneditedImage,
+        //   0, 0, 0, 0,
+        //   $productionReadyWidth, $productionReadyHeight,
+        //   $uneditedImageWidth, $uneditedImageHeight
+        // );
+        //
+        // // Save them to the filesystem
+        // $imagesave($productionReadyImage, public_path() . '/pictune_assets/images/' . $recordData['image_name']);
 
-        // Production ready image data
-        $productionReadyImage = imagecreatetruecolor(1024, 1024);
-        $productionReadyWidth = 1024;
-        $productionReadyHeight = 1024;
-        $productionReadyImageRatio = $productionReadyWidth / $productionReadyHeight;
-
-        if ($uneditedImageRatio < $productionReadyImageRatio) {
-          // The submitted image is taller than it needs to be
-          if ($uneditedImageHeight > $productionReadyHeight) {
-            // The image is too tall
-            $uneditedImageHeight = $productionReadyHeight;
-            $uneditedImageWidth = ciel($uneditedImageHeight / $uneditedImageRatio);
-          }
-        } else if ($uneditedImageWidth > $productionReadyWidth) {
-          // The submitted image is wider than it needs to be
-          $uneditedImageWidth = $productionReadyWidth;
-          $uneditedImageHeight = ceil($uneditedImageWidth / $uneditedImageRatio);
-        }
-        imagecopyresized(
-          $productionReadyImage, $uneditedImage,
-          0, 0, 0, 0,
-          $productionReadyWidth, $productionReadyHeight,
-          $uneditedImageWidth, $uneditedImageHeight
-        );
-
-        // Save them to the filesystem
-        $imagesave($productionReadyImage, public_path() . '/pictune_assets/images/' . $recordData['image_name']);
         $request->file('audio_name')->move(public_path() . '/pictune_assets/audio', $recordData['audio_name']);
       }
 

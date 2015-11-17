@@ -32,6 +32,20 @@ class UserController extends Controller
     }
 
     /**
+     * Return a pictuners' pictunes and profile
+     *
+     * @param username
+     * @return \Illuminate\Http\Response
+     */
+    public function user_pictunes($tld, $username)
+    {
+      // There's actually a username
+      $userRequested = User::where(['username' => $username])->firstOrFail();
+      $viewData['pictunes'] = json_encode($userRequested->pictunes()->get());
+      return view('pictune.dashboard', $viewData);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param  CreateUser  $request
