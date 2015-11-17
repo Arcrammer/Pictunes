@@ -132,3 +132,22 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+body {
+  background-color: #f2f2f2; }
+
+.pictunes {
+  margin-left: 25%; }
+
+.pictune {
+  color: #252525;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.85em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: lavender;
+  width: 51.25%; }
+
+.pictune img {
+  width: 100%; }

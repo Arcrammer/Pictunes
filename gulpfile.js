@@ -1,5 +1,4 @@
-var elixir = require('laravel-elixir'),
-cssDir = 'public/Assets/Stylesheets/';
+var elixir = require('laravel-elixir');
 elixir.config.sourcemaps = false;
 
 /*
@@ -19,5 +18,5 @@ elixir(function(mix) {
       'Reset.css',
       'Main.css'
     ], 'Main.css')
-    .version(cssDir + 'Main.css');
+    .version('../public/Assets/Stylesheets/Dashboard.css');
 });

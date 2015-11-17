@@ -8,6 +8,7 @@ use Pictunes\Http\Controllers\Controller;
 
 use Auth;
 use Pictunes\Pictune; // 'Pictune' model
+use Pictunes\User; // 'User' model
 use Pictunes\Tag; // 'Tag' model
 
 trait DashboardTrait {
@@ -141,5 +142,22 @@ trait DashboardTrait {
       }
 
       return redirect('/');
+  }
+
+  /**
+   * Show a users' profile and pictunes
+   *
+   * @param username
+   * @return \Illuminate\Http\Response
+   */
+  public function user_pictunes($tld, $username)
+  {
+    $viewData['pictunes'] = json_encode(
+      User::where(['username' => $username])
+        ->firstOrFail()
+        ->pictunesWithUserInfo($tld, $username)
+        ->get()
+      );
+    return view('pictune.dashboard', $viewData);
   }
 }

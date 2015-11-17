@@ -18,7 +18,7 @@ Route::group(['domain' => 'pictunes.{tld}'], function () {
     // What do they want, exactly? Send them home.
     return redirect('http://pictunes.dev/');
   });
-  Route::get('pictuner/{username}', 'UserController@user_pictunes');
+  Route::get('pictuner/{username}', 'DashboardController@user_pictunes');
 
   // Controllers
   Route::resource('/', 'DashboardController@index');
