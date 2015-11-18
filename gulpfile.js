@@ -13,10 +13,26 @@ elixir.config.sourcemaps = false;
  */
 
 elixir(function(mix) {
-  mix.sass('Main.scss', 'resources/assets/css/Main.css')
+  mix.sass([
+    'Main.scss',
+    'Dashboard.scss'
+  ], 'resources/assets/css/Dashboard.css')
     .styles([
       'Reset.css',
       'Main.css'
-    ], 'Main.css')
-    .version('../public/Assets/Stylesheets/Dashboard.css');
+    ], 'public/css/Dashboard.css');
+
+  mix.sass([
+    'Main.scss',
+    'Authentication.scss'
+  ], 'resources/assets/css/Authentication.css')
+    .styles([
+      'Reset.css',
+      'Authentication.css'
+    ], 'public/css/Authentication.css');
+
+    mix.version([
+      'css/Dashboard.css',
+      'css/Authentication.css'
+    ]);
 });

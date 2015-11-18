@@ -1,0 +1,31 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Variables
+$dark-black: #252525;
+
+// Fonts
+@mixin all_caps {
+  color: $dark-black;
+  font: {
+    family: "Helvetica Neue", "Helvetica", sans-serif;
+    size: 0.85em;
+    weight: 300;
+  }
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+};
+
+// Pictunes
+.pictunes {
+  margin-left: 25%;
+}
+
+.pictune {
+  @include all_caps;
+  background-color: lavender;
+  width: 51.25%;
+}
+
+.pictune img {
+  width: 100%;
+}

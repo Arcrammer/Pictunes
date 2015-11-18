@@ -3,7 +3,7 @@
   <head>
     <title>Dashboard » @yield('title')</title>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ elixir('Assets/Stylesheets/Dashboard.css') }}">
+    <link rel="stylesheet" href="{{ elixir('css/Dashboard.css') }}">
   </head>
   <body>
     <div class="container">

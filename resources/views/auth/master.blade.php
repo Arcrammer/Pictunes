@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Pictunes » @yield('title')</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ elixir('css/Authentication.css') }}">
   </head>
   <body>
     <div class="container">

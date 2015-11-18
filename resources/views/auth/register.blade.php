@@ -8,32 +8,16 @@
 @endif
 <form method="POST" action="/auth/register">
     {!! csrf_field() !!}
-    <div>
-        Username
-        <input type="text" name="username" value="{{ old('username') }}">
-    </div>
+        <input type="text" name="username" id="username"  placeholder="Username" value="{{ old('username') }}">
 
-    <div>
-        Email
-        <input type="email" name="email" value="{{ old('email') }}">
-    </div>
+        <input type="email" name="email" id="email_address"  placeholder="Email" value="{{ old('email') }}">
 
-    <div>
-        Password
-        <input type="password" name="password">
-    </div>
+        <input type="password" name="password" id="password" placeholder="Password">
 
-    <div>
-        Confirm Password
-        <input type="password" name="password_confirmation">
-    </div>
+        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Confirm">
 
-    <div>
-        <button type="submit">Register</button>
-    </div>
-
-    <div>
+        <input class="button" type="submit" value="Register"></input>
+        <br />
         <a href="/auth/login">Login</a>
-    </div>
 </form>
 @stop
