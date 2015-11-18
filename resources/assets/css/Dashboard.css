@@ -1,6 +1,95 @@
 body {
   background-color: #f2f2f2; }
 
+button, .button {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  background-color: transparent;
+  border: 2px solid #252525;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 15px 35px;
+  transition: background-color 125ms; }
+
+button:hover, .button:hover {
+  background-color: #d41f2f;
+  border-color: #921a25;
+  color: white; }
+
+button:active, .button:active {
+  background-color: #71141c;
+  border-color: #d41f2f;
+  color: white; }
+
+a:link, a:visited {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #d41f2f;
+  text-decoration: none;
+  transition: color 125ms; }
+
+a:hover {
+  color: #f93243; }
+
+a:active {
+  color: #71141c; }
+
+body {
+  background-color: #f2f2f2; }
+
+button, .button {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  background-color: transparent;
+  border: 2px solid #252525;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 15px 35px;
+  transition: background-color 125ms; }
+
+button:hover, .button:hover {
+  background-color: #d41f2f;
+  border-color: #921a25;
+  color: white; }
+
+button:active, .button:active {
+  background-color: #71141c;
+  border-color: #d41f2f;
+  color: white; }
+
+a:link, a:visited {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #d41f2f;
+  text-decoration: none;
+  transition: color 125ms; }
+
+a:hover {
+  color: #f93243; }
+
+a:active {
+  color: #71141c; }
+
 .pictunes {
   margin-left: 25%; }
 

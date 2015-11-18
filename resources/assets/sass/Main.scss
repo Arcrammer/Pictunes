@@ -1,9 +1,69 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// Colours
-$lightGrey: #f2f2f2;
+// Variables
+$medium-light-red: #f93243;
+$medium-red: #d41f2f;
+$medium-dark-red: #71141c;
+$light-grey: #f2f2f2;
+$dark-black: #252525;
+
+// Mixins
+@mixin helvetica-thin {
+  font: {
+    family: "Helvetica Neue", "Helvetica", sans-serif;
+    size: 0.9em;
+    weight: 200;
+  }
+  letter-spacing: 0.675px
+}
 
 // Structure
 body {
-  background-color: $lightGrey;
+  background-color: $light-grey;
+}
+
+// Buttons
+button, .button {
+  @include helvetica-thin;
+  background-color: transparent;
+  border: 2px solid $dark-black;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 15px 35px;
+  transition: background-color 125ms;
+}
+
+button:hover, .button:hover {
+  background-color: $medium-red;
+  border-color: #921a25;
+  color: white;
+}
+
+button:active, .button:active {
+  background-color: $medium-dark-red;
+  border-color: $medium-red;
+  color: white;
+}
+
+// Links
+a:link, a:visited {
+  @include helvetica-thin;
+  font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  color: $medium-red;
+  text-decoration: none;
+  transition: color 125ms;
+}
+
+a:hover {
+  color: $medium-light-red;
+}
+
+a:active {
+  color: $medium-dark-red;
 }

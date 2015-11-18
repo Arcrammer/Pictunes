@@ -1,9 +1,49 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "Main";
 
-// Variables
-$light-grey: #f2f2f2;
+// Form
+form {
+  margin: auto;
+  position: relative;
+  top: 150px;
+  width: 35%;
+}
 
-// Structure
-body {
-  background-color: $light-grey;
+input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    @include helvetica-thin;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid $dark-black;
+    line-height: 2em;
+    margin: 10px 0;
+    outline: none;
+    padding: 15px 0;
+    text-indent: 15%;
+    width: 100%;
+}
+
+form a {
+  display: block;
+  text-align: center;
+}
+
+form label {
+  @include helvetica-thin;
+  font: {
+    size: 0.8em;
+    weight: 500;
+  }
+  letter-spacing: 0.5px;
+}
+
+.remember-box {
+  line-height: 3em;
+  text-align: center;
+}
+
+// Buttons
+button, .button {
+  margin: 50px auto 15px !important;
 }

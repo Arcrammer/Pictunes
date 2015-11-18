@@ -7,31 +7,19 @@
   @endforeach
 @endif
 <form method="POST" action="/auth/login">
-    {!! csrf_field() !!}
+  {!! csrf_field() !!}
+  <!-- <input type="text" name="username" value="{{ old('username') }}"> -->
+  <input type="text" name="username" placeholder="Username" value="iAlexander">
 
-    <div>
-        Username
-        <!-- <input type="text" name="username" value="{{ old('username') }}"> -->
-        <input type="text" name="username" value="iAlexander">
-    </div>
+  <input type="password" name="password" placeholder="Password" id="password" value="secret">
 
-    <div>
-        Password
-        <input type="password" name="password" id="password" value="secret">
-    </div>
+  <div class="remember-box">
+    <input type="checkbox" name="remember" id="remember" checked>
+    <label for="remember">Remember Me</label>
+  </div>
 
-    <div>
-        <input type="checkbox" name="remember" id="remember" checked>
-        <label for="remember">Remember Me</label>
-    </div>
+  <input type="submit" class="button" value="Login">
 
-    <div>
-        <button type="submit">Login</button>
-    </div>
-
-    <div>
-        <a href="/auth/register">I need an account.</a>
-    </div>
-
+  <a href="/auth/register">I need an account.</a>
 </form>
 @stop
