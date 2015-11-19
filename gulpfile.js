@@ -13,7 +13,8 @@ elixir.config.sourcemaps = false;
  */
 
 elixir(function(mix) {
-  mix.sass([
+  mix
+    .sass([
     'Main.scss',
     'Dashboard.scss'
   ], 'resources/assets/css/Dashboard.css')
@@ -22,7 +23,8 @@ elixir(function(mix) {
       'Main.css'
     ], 'public/css/Dashboard.css');
 
-  mix.sass([
+  mix
+    .sass([
     'Main.scss',
     'Authentication.scss'
   ], 'resources/assets/css/Authentication.css')
@@ -31,8 +33,8 @@ elixir(function(mix) {
       'Authentication.css'
     ], 'public/css/Authentication.css');
 
-    mix.version([
-      'css/Dashboard.css',
-      'css/Authentication.css'
-    ]);
+  mix.version([
+    'css/Dashboard.css',
+    'css/Authentication.css'
+  ]);
 });
