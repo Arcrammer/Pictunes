@@ -18,20 +18,29 @@ button, .button {
 
 button:hover, .button:hover {
   background-color: #d41f2f;
-  border-color: #921a25;
+  border-color: #bb1625;
   color: white; }
 
 button:active, .button:active {
   background-color: #71141c;
-  border-color: #d41f2f;
+  border-color: #a94a52;
   color: white; }
+
+.disabled {
+  border-color: #a5a5a5 !important;
+  color: #8a8a8a;
+  cursor: not-allowed; }
+
+.disabled:hover {
+  background-color: rgba(148, 148, 148, 0.52);
+  color: 585858; }
 
 a:link, a:visited {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
   letter-spacing: 0.675px;
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: #d41f2f;
@@ -64,20 +73,29 @@ button, .button {
 
 button:hover, .button:hover {
   background-color: #d41f2f;
-  border-color: #921a25;
+  border-color: #bb1625;
   color: white; }
 
 button:active, .button:active {
   background-color: #71141c;
-  border-color: #d41f2f;
+  border-color: #a94a52;
   color: white; }
+
+.disabled {
+  border-color: #a5a5a5 !important;
+  color: #8a8a8a;
+  cursor: not-allowed; }
+
+.disabled:hover {
+  background-color: rgba(148, 148, 148, 0.52);
+  color: 585858; }
 
 a:link, a:visited {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
   letter-spacing: 0.675px;
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: #d41f2f;

@@ -1,12 +1,22 @@
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "Main";
 
+// Sides
+.left, .right {
+  float: left;
+  margin: 75px 25px;
+  width: 462px;
+}
+
+.login-left {
+  float: none;
+  margin: 75px auto;
+}
+
 // Form
 form {
   margin: auto;
-  position: relative;
-  top: 150px;
-  width: 35%;
+  width: 300px;
 }
 
 input[type="text"],
@@ -46,4 +56,21 @@ form label {
 // Buttons
 button, .button {
   margin: 50px auto 15px !important;
+}
+
+#problem-message {
+  @include helvetica-thin;
+  // Message shown when the user
+  // has already logged in or
+  // when anything else goes bad
+  display: none;
+  font-size: 1.05em;
+  line-height: 175%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#problem-message a {
+  display: block;
+
 }

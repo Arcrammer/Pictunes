@@ -6,20 +6,22 @@
     <p>{{ $error }}</p>
   @endforeach
 @endif
-<form method="POST" action="/auth/login">
-  {!! csrf_field() !!}
-  <!-- <input type="text" name="username" value="{{ old('username') }}"> -->
-  <input type="text" name="username" placeholder="Username" value="iAlexander">
+<div class="left login-left">
+  <form method="POST" action="/auth/login">
+    {!! csrf_field() !!}
+    <!-- <input type="text" name="username" value="{{ old('username') }}"> -->
+    <input type="text" name="username" placeholder="Username" value="iAlexander">
 
-  <input type="password" name="password" placeholder="Password" id="password" value="secret">
+    <input type="password" name="password" placeholder="Password" id="password" value="secret">
 
-  <div class="remember-box">
-    <input type="checkbox" name="remember" id="remember" checked>
-    <label for="remember">Remember Me</label>
-  </div>
+    <div class="remember-box">
+      <input type="checkbox" name="remember" id="remember" checked>
+      <label for="remember">Remember Me</label>
+    </div>
 
-  <input type="submit" class="button" value="Login">
+    <input type="submit" class="button" value="Login">
 
-  <a href="/auth/register">I need an account.</a>
-</form>
+    <a href="/auth/register">I need an account.</a>
+  </form>
+</div> <!-- .left .login-left -->
 @stop

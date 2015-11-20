@@ -38,20 +38,32 @@ button, .button {
 
 button:hover, .button:hover {
   background-color: $medium-red;
-  border-color: #921a25;
+  border-color: #bb1625;
   color: white;
 }
 
 button:active, .button:active {
   background-color: $medium-dark-red;
-  border-color: $medium-red;
+  border-color: #a94a52;
   color: white;
+}
+
+// Disabled Stuff
+.disabled {
+  border-color: #a5a5a5 !important;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: rgba(148, 148, 148, 0.52);
+  color: 585858;
 }
 
 // Links
 a:link, a:visited {
   @include helvetica-thin;
-  font-size: 0.75em;
+  font-size: 0.85em;
   font-weight: 500;
   letter-spacing: 0.5px;
 
