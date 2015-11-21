@@ -84,12 +84,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 article,
@@ -103,41 +103,42 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: '';
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: #f2f2f2;
 }
 
-body {
-  background-color: #f2f2f2; }
-
 .pictunes {
-  margin-left: 25%; }
+  margin-left: 25%;
+}
 
 .pictune {
   color: #252525;
@@ -147,7 +148,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   background-color: lavender;
-  width: 51.25%; }
+  width: 51.25%;
+}
 
 .pictune img {
-  width: 100%; }
+  width: 100%;
+}

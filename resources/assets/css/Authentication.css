@@ -1,7 +1,9 @@
 body {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+}
 
-button, .button {
+button,
+.button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
@@ -14,28 +16,36 @@ button, .button {
   margin: 15px auto;
   outline: none;
   padding: 15px 35px;
-  transition: background-color 125ms; }
+  transition: background-color 125ms;
+}
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: #d41f2f;
   border-color: #bb1625;
-  color: white; }
+  color: white;
+}
 
-button:active, .button:active {
+button:active,
+.button:active {
   background-color: #71141c;
   border-color: #a94a52;
-  color: white; }
+  color: white;
+}
 
 .disabled {
   border-color: #a5a5a5 !important;
   color: #8a8a8a;
-  cursor: not-allowed; }
+  cursor: not-allowed;
+}
 
 .disabled:hover {
   background-color: rgba(148, 148, 148, 0.52);
-  color: 585858; }
+  color: 585858;
+}
 
-a:link, a:visited {
+a:link,
+a:visited {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
@@ -45,18 +55,22 @@ a:link, a:visited {
   letter-spacing: 0.5px;
   color: #d41f2f;
   text-decoration: none;
-  transition: color 125ms; }
+  transition: color 125ms;
+}
 
 a:hover {
-  color: #f93243; }
+  color: #f93243;
+}
 
 a:active {
-  color: #71141c; }
-
+  color: #71141c;
+}
 body {
-  background-color: #f2f2f2; }
+  background-color: #f2f2f2;
+}
 
-button, .button {
+button,
+.button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
@@ -69,28 +83,36 @@ button, .button {
   margin: 15px auto;
   outline: none;
   padding: 15px 35px;
-  transition: background-color 125ms; }
+  transition: background-color 125ms;
+}
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: #d41f2f;
   border-color: #bb1625;
-  color: white; }
+  color: white;
+}
 
-button:active, .button:active {
+button:active,
+.button:active {
   background-color: #71141c;
   border-color: #a94a52;
-  color: white; }
+  color: white;
+}
 
 .disabled {
   border-color: #a5a5a5 !important;
   color: #8a8a8a;
-  cursor: not-allowed; }
+  cursor: not-allowed;
+}
 
 .disabled:hover {
   background-color: rgba(148, 148, 148, 0.52);
-  color: 585858; }
+  color: 585858;
+}
 
-a:link, a:visited {
+a:link,
+a:visited {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
@@ -100,47 +122,58 @@ a:link, a:visited {
   letter-spacing: 0.5px;
   color: #d41f2f;
   text-decoration: none;
-  transition: color 125ms; }
+  transition: color 125ms;
+}
 
 a:hover {
-  color: #f93243; }
+  color: #f93243;
+}
 
 a:active {
-  color: #71141c; }
+  color: #71141c;
+}
 
 img[alt="Logo.png"] {
   display: block;
   height: 64px;
   margin: 2.5% auto;
-  width: 64px; }
+  width: 64px;
+}
 
-.left, .right {
+.left,
+.right {
   float: left;
   margin: 7.32421875% 2.44140625%;
-  width: 45.1171875%; }
+  width: 45.1171875%;
+}
 
 .login-left {
   float: none;
-  margin: 7.32421875% auto; }
+  margin: 7.32421875% auto;
+}
 
 .login-probs {
   position: relative;
-  top: 50px; }
+  top: 50px;
+}
 
 .login-prob {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
   letter-spacing: 0.675px;
-  text-align: center; }
+  text-align: center;
+}
 
 .login-prob:not(:first-of-type) {
-  margin-top: 1%; }
+  margin-top: 1%;
+}
 
 .terms {
   height: 380px;
   margin: 2.5% auto 5%;
-  overflow: scroll; }
+  overflow: scroll;
+}
 
 .terms p {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -151,20 +184,24 @@ img[alt="Logo.png"] {
   line-height: 140%;
   margin: 3.5% 0;
   margin-left: 20% !important;
-  width: 75%; }
+  width: 75%;
+}
 
 .agreement-box {
-  margin-left: 20%; }
+  margin-left: 20%;
+}
 
 .agreement-label {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 0.9em;
   font-weight: 200;
-  letter-spacing: 0.675px; }
+  letter-spacing: 0.675px;
+}
 
 form {
   margin: auto;
-  width: 64.935064935%; }
+  width: 64.935064935%;
+}
 
 input[type="text"],
 input[type="email"],
@@ -181,11 +218,13 @@ input[type="password"] {
   outline: none;
   padding: 5% 0;
   text-indent: 15%;
-  width: 100%; }
+  width: 100%;
+}
 
 form a {
   display: block;
-  text-align: center; }
+  text-align: center;
+}
 
 form label {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -194,14 +233,18 @@ form label {
   letter-spacing: 0.675px;
   font-size: 0.8em;
   font-weight: 500;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+}
 
 .remember-box {
   line-height: 3em;
-  text-align: center; }
+  text-align: center;
+}
 
-button, .button {
-  margin: 16.666666667% auto 5%  !important; }
+button,
+.button {
+  margin: 16.666666667% auto 5%  !important;
+}
 
 #problem-message {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -212,7 +255,9 @@ button, .button {
   font-size: 1.05em;
   line-height: 175%;
   margin-top: 50px;
-  text-align: center; }
+  text-align: center;
+}
 
 #problem-message a {
-  display: block; }
+  display: block;
+}
