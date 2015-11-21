@@ -12,5 +12,6 @@
     <div class="container">
       @yield('content')
     </div> <!-- .container -->
+    <img src="{{ asset('images/Logo.png') }}" alt="Logo.png">
   </body>
 </html>

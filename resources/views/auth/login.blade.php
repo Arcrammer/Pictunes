@@ -2,9 +2,11 @@
 @section('title', 'Login')
 @section('content')
 @if ($errors)
+<div class="login-probs">
   @foreach ($errors->all() as $error)
-    <p>{{ $error }}</p>
+    <p class="login-prob">{{ $error }}</p>
   @endforeach
+</div> <!-- .login-probs -->
 @endif
 <div class="left login-left">
   <form method="POST" action="/auth/login">

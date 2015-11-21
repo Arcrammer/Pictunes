@@ -4,7 +4,7 @@ namespace Pictunes\Http\Requests;
 
 use Pictunes\Http\Requests\Request;
 
-class UpdateUserData extends Request
+class UpdateUserData extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.

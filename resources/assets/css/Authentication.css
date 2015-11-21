@@ -108,18 +108,63 @@ a:hover {
 a:active {
   color: #71141c; }
 
+img[alt="Logo.png"] {
+  display: block;
+  height: 64px;
+  margin: 2.5% auto;
+  width: 64px; }
+
 .left, .right {
   float: left;
-  margin: 75px 25px;
-  width: 462px; }
+  margin: 7.32421875% 2.44140625%;
+  width: 45.1171875%; }
 
 .login-left {
   float: none;
-  margin: 75px auto; }
+  margin: 7.32421875% auto; }
+
+.login-probs {
+  position: relative;
+  top: 50px; }
+
+.login-prob {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  text-align: center; }
+
+.login-prob:not(:first-of-type) {
+  margin-top: 1%; }
+
+.terms {
+  height: 380px;
+  margin: 2.5% auto 5%;
+  overflow: scroll; }
+
+.terms p {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.8em;
+  line-height: 140%;
+  margin: 3.5% 0;
+  margin-left: 20% !important;
+  width: 75%; }
+
+.agreement-box {
+  margin-left: 20%; }
+
+.agreement-label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px; }
 
 form {
   margin: auto;
-  width: 300px; }
+  width: 64.935064935%; }
 
 input[type="text"],
 input[type="email"],
@@ -132,9 +177,9 @@ input[type="password"] {
   border: 0;
   border-bottom: 2px solid #252525;
   line-height: 2em;
-  margin: 10px 0;
+  margin: 3.3333333333% 0;
   outline: none;
-  padding: 15px 0;
+  padding: 5% 0;
   text-indent: 15%;
   width: 100%; }
 
@@ -156,7 +201,7 @@ form label {
   text-align: center; }
 
 button, .button {
-  margin: 50px auto 15px !important; }
+  margin: 16.666666667% auto 5%  !important; }
 
 #problem-message {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
