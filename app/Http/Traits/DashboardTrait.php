@@ -39,7 +39,7 @@ trait DashboardTrait {
       if (!Auth::check()) {
         // The user has not logged in; Treat
         // them as a prospective user
-        return redirect('http://pictunes.' . env('TLD') . '/auth/register');
+        return redirect($request->url().'/auth/register');
       }
   }
 

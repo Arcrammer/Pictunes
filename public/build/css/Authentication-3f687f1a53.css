@@ -1,0 +1,398 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  background-color: #f2f2f2;
+}
+
+button,
+.button {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  background-color: transparent;
+  border: 2px solid #252525;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 15px 35px;
+  transition: background-color 125ms;
+}
+
+button:hover,
+.button:hover {
+  background-color: #d41f2f;
+  border-color: #bb1625;
+  color: white;
+}
+
+button:active,
+.button:active {
+  background-color: #71141c;
+  border-color: #a94a52;
+  color: white;
+}
+
+.disabled {
+  border-color: #a5a5a5 !important;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: rgba(148, 148, 148, 0.52);
+  color: 585858;
+}
+
+a:link,
+a:visited {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.85em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #d41f2f;
+  text-decoration: none;
+  transition: color 125ms;
+}
+
+a:hover {
+  color: #f93243;
+}
+
+a:active {
+  color: #71141c;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+button,
+.button {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  background-color: transparent;
+  border: 2px solid #252525;
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 15px 35px;
+  transition: background-color 125ms;
+}
+
+button:hover,
+.button:hover {
+  background-color: #d41f2f;
+  border-color: #bb1625;
+  color: white;
+}
+
+button:active,
+.button:active {
+  background-color: #71141c;
+  border-color: #a94a52;
+  color: white;
+}
+
+.disabled {
+  border-color: #a5a5a5 !important;
+  color: #8a8a8a;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: rgba(148, 148, 148, 0.52);
+  color: 585858;
+}
+
+a:link,
+a:visited {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.85em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #d41f2f;
+  text-decoration: none;
+  transition: color 125ms;
+}
+
+a:hover {
+  color: #f93243;
+}
+
+a:active {
+  color: #71141c;
+}
+
+img[alt="Logo.png"] {
+  display: block;
+  height: 64px;
+  margin: 2.5% auto;
+  width: 64px;
+}
+
+.left,
+.right {
+  float: left;
+  margin: 7.32421875% 2.44140625%;
+  width: 45.1171875%;
+}
+
+.login-left {
+  float: none;
+  margin: 7.32421875% auto;
+}
+
+.login-probs {
+  position: relative;
+  top: 50px;
+}
+
+.login-prob {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  text-align: center;
+}
+
+.login-prob:not(:first-of-type) {
+  margin-top: 1%;
+}
+
+.terms {
+  height: 380px;
+  margin: 2.5% auto 5%;
+  overflow: scroll;
+}
+
+.terms p {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.8em;
+  line-height: 140%;
+  margin: 3.5% 0;
+  margin-left: 20% !important;
+  width: 75%;
+}
+
+.agreement-box {
+  margin-left: 20%;
+}
+
+.agreement-label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+}
+
+form {
+  margin: auto;
+  width: 64.935064935%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #252525;
+  line-height: 2em;
+  margin: 3.3333333333% 0;
+  outline: none;
+  padding: 5% 0;
+  text-indent: 15%;
+  width: 100%;
+}
+
+form a {
+  display: block;
+  text-align: center;
+}
+
+form label {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  font-size: 0.8em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.remember-box {
+  line-height: 3em;
+  text-align: center;
+}
+
+button,
+.button {
+  margin: 16.666666667% auto 5%  !important;
+}
+
+#problem-message {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 0.9em;
+  font-weight: 200;
+  letter-spacing: 0.675px;
+  display: none;
+  font-size: 1.05em;
+  line-height: 175%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#problem-message a {
+  display: block;
+}
