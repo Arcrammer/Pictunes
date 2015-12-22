@@ -7,4 +7,4 @@ php:
 before_script:
   - npm install
   - gulp
-  - php artisan migrate:refresh --seed
+  - yes | php artisan migrate:refresh --seed
