@@ -21,7 +21,9 @@ Route::group(['domain' => 'pictunes.{tld}'], function () {
   Route::get('pictuner/{username}', 'DashboardController@user_pictunes');
 
   // Controllers
-  Route::resource('/', 'DashboardController@index');
+  Route::group(['middleware' => 'dashboard'], function () {
+    Route::resource('/', 'DashboardController@index');
+  });
 
   // Authentication controllers
   Route::controllers([

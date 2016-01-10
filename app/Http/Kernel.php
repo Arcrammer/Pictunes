@@ -29,5 +29,6 @@ class Kernel extends HttpKernel
         'auth' => \Pictunes\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \Pictunes\Http\Middleware\RedirectIfAuthenticated::class,
+        'dashboard' => \Pictunes\Http\Middleware\LoginForDashboard::class,
     ];
 }

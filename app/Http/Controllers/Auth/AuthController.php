@@ -26,7 +26,7 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     protected $redirectPath = "/";
-    protected $loginPath = "auth/login";
+    protected $loginPath = "/auth/login";
     protected $username = 'username';
 
     /**
@@ -45,7 +45,10 @@ class AuthController extends Controller
      * @return Response
      */
     public function authenticate() {
-      if (Auth::attempt(['username' => $username, 'password' => $password])) {
+      if (Auth::attempt([
+        'username' => $username,
+        'password' => $password
+      ])) {
         // Authentication was successful
         return redirect()->intended();
       }

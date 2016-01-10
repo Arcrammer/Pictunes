@@ -1,12 +1,14 @@
 @extends('pictune.master')
 @section('title', 'Dashboard')
 @section('content')
-@if (!Auth::check())
-  <a href="/">Home</a>
-@else
+
+<!-- Links at the top -->
+<nav>
   <a href="/">Dashboard</a>
   <a href="/auth/logout">Logout</a>
-@endif
+</nav>
+
+<!-- Feed -->
 <div class="pictunes">
   @foreach (json_decode($pictunes) as $pictune)
     <div class="pictune">
