@@ -304,10 +304,27 @@ img[alt="Logo.png"] {
   margin-top: 1%;
 }
 
-.terms {
+.terms-container {
+  margin-left: 15% !important;
+  position: relative;
+}
+
+.terms-container .terms {
   height: 380px;
-  margin: 2.5% auto 5%;
   overflow: scroll;
+  left: 6%;
+  right: 5%;
+}
+
+.terms-container .terms::before {
+  background: linear-gradient(to bottom, rgba(242, 242, 242, 0) 0%, rgba(242, 242, 242, 0) 50%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f2f2f2', endColorstr='#f2f2f2',GradientType=0 );
+  content: '';
+  height: 30%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .terms p {
@@ -317,12 +334,17 @@ img[alt="Logo.png"] {
   letter-spacing: 0.675px;
   font-size: 0.8em;
   line-height: 140%;
-  margin: 3.5% 0;
-  margin-left: 20% !important;
-  width: 75%;
+  margin-left: 10% !important;
+  width: 85%;
+}
+
+.terms p:last-of-type::after {
+  content: '';
+  padding: 25%;
 }
 
 .agreement-box {
+  margin-top: 5%;
   margin-left: 20%;
 }
 
